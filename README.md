@@ -1,46 +1,64 @@
-usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
-           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
-           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
-           <command> [<args>]
+# Projects for Portfolio
 
-These are common Git commands used in various situations:
+# Simple project to get used to workflow
 
-start a working area (see also: git help tutorial)
-   clone      Clone a repository into a new directory
-   init       Create an empty Git repository or reinitialize an existing one
+> Use Git and Docker in the workflow
+> 
 
-work on the current change (see also: git help everyday)
-   add        Add file contents to the index
-   mv         Move or rename a file, a directory, or a symlink
-   restore    Restore working tree files
-   rm         Remove files from the working tree and from the index
+### Sales Performance Dashboard
 
-examine the history and state (see also: git help revisions)
-   bisect     Use binary search to find the commit that introduced a bug
-   diff       Show changes between commits, commit and working tree, etc
-   grep       Print lines matching a pattern
-   log        Show commit logs
-   show       Show various types of objects
-   status     Show the working tree status
-
-grow, mark and tweak your common history
-   backfill   Download missing objects in a partial clone
-   branch     List, create, or delete branches
-   commit     Record changes to the repository
-   merge      Join two or more development histories together
-   rebase     Reapply commits on top of another base tip
-   reset      Reset current HEAD to the specified state
-   switch     Switch branches
-   tag        Create, list, delete or verify a tag object signed with GPG
-
-collaborate (see also: git help workflows)
-   fetch      Download objects and refs from another repository
-   pull       Fetch from and integrate with another repository or a local branch
-   push       Update remote refs along with associated objects
-
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
+- **Part 1: SQL (Data Retrieval & Cleaning)**
+    
+    **Goal:** Practice querying a database and preparing clean tables.
+    
+    **Assignments:**
+    
+    1. **Basic queries:**
+        - Count total number of orders.
+        - Find distinct product categories sold.
+        - Get top 10 customers by total spend.
+    2. **Aggregations:**
+        - Calculate monthly revenue.
+        - Find average order value (AOV).
+        - Region-wise sales breakdown.
+    3. **Joins (if you add more tables like `products` or `customers`):**
+        - List customer names with their total revenue.
+        - Find top 5 products by revenue in each region.
+    4. **Export:**
+        - Save these query outputs into *views* or CSVs for use in Python.
+- **Part 2: Python (Analysis & Automation)**
+    
+    **Goal:** Pull data from SQL, analyze deeper patterns, and prep data for reporting.
+    
+    **Assignments:**
+    
+    1. **Connect to database** using `pandas` + `sqlalchemy`. Run your SQL queries from Python.
+    2. **Data cleaning:** handle missing values, ensure dates are datetime type, calculate total revenue per order (`quantity * price`).
+    3. **Exploratory analysis:**
+        - Monthly revenue trend (line chart).
+        - Revenue contribution by region (bar chart).
+        - Top 10 products by sales (bar chart).
+    4. **Advanced analysis (optional but cool):**
+        - Customer segmentation (loyal vs. one-time buyers).
+        - Simple forecast (next month’s sales using moving average).
+    5. **Export cleaned/aggregated data** into an Excel file for dashboarding.
+- **Part 3: Excel (Visualization & Dashboard)**
+    
+    **Goal:** Build a stakeholder-friendly dashboard.
+    
+    **Assignments:**
+    
+    1. Import Python’s output Excel file.
+    2. Build pivot tables:
+        - Monthly sales trend.
+        - Sales by region.
+        - Top 5 products.
+    3. Add charts: line (trend), bar (products/regions), pie (region share).
+    4. Create slicers/filters: by year, region, product category.
+    5. Format everything into a neat **dashboard sheet** that looks like a deliverable for a manager.
+- **Workflow Simulation**
+    1. Store raw data → SQL.
+    2. Query + clean → SQL.
+    3. Pull + analyze → Python.
+    4. Export → Excel.
+    5. Build dashboard → Excel.
